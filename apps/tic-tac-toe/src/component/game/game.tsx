@@ -10,7 +10,7 @@ export default function Game() {
         variants={titleVaraints} 
         initial="hidden"
         animate="show"
-        className="text-center text-7xl font-display text-white select-none"
+        className="text-center text-5xl font-display text-white select-none"
       >Tic Tac Toe</motion.h1>
       <motion.div 
         variants={boardContainerVariants} 
