@@ -1,0 +1,10 @@
+.box {
+  @apply bg-blue-200 aspect-square rounded-lg justify-center flex items-center gap-8
+}
+
+circle,
+line {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: transparent;
+}
