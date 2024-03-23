@@ -1,0 +1,11 @@
+svg {
+  pointer-events: none;
+}
+
+circle,
+line {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: transparent;
+  pointer-events: none;
+}

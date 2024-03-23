@@ -1,9 +1,14 @@
-// import NxWelcome from './nx-welcome';
+import Layer from '@/component/layer/layer';
 import Game from '@component/game/game';
+import { AppProvider } from '@/app/context';
 
 export function App() {
+
   return (
-    <Game />
+    <AppProvider>
+      <Layer />
+      <Game />
+    </AppProvider>
   );
 }
 

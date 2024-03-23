@@ -1,5 +1,5 @@
 .box {
-  @apply bg-blue-200 aspect-square rounded-lg justify-center flex items-center gap-8
+  @apply bg-white aspect-square rounded-lg justify-center flex items-center gap-8
 }
 
 circle,

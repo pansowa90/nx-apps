@@ -5,6 +5,7 @@ export const boardContainerVariants = {
   show: {
     opacity: 1,
     transition: {
+      delayChildren: .5,
       staggerChildren: .25
     }
   } 
@@ -17,15 +18,4 @@ export const boxVariants = {
   show: {
     opacity: 1,
   } 
-}
-
-export const titleVaraints = {
-  hidden: {
-    opacity: 0,
-    y: 75,
-  },
-  show: {
-    opacity: 1,
-    y: 0 
-  }
 }

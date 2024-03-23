@@ -1,73 +1,26 @@
-import './box.css';
+import { MouseEventHandler, useState } from 'react';
 import { motion } from "framer-motion";
+import Icon from '@component/icon/icon';
 
-const draw = {
-  hidden: { pathLength: 0, opacity: 0 },
-  visible: (i: number) => {
-    const delay = 1 + i * 0.5;
-    return {
-      pathLength: 1,
-      opacity: 1,
-      transition: {
-        pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
-        opacity: { delay, duration: 0.01 }
-      }
-    };
-  }
-};
+type Box<T> = {
+  index: number;
+  state: T; 
+  variants: Record<any, any>;
+  onClick: MouseEventHandler<HTMLDivElement>;
+}
 
-export default function Box({ variants }: { variants: Record<any, any>}) {
+export default function Box<T>({ index, state, variants, onClick }: Box<T>) {
   return (
     <motion.div 
+      onClick={onClick}
       whileTap={{ scale: 0.9 }}
       whileHover={{ scale: 1.1 }}
       variants={variants} 
-      className="box"
+      className="bg-gray-800 aspect-square rounded-lg justify-center flex items-center gap-8"
       transition={{ bounceDamping: 10, bounceStiffness: 600 }}
+      data-index={index}
     >
-      {/* <motion.svg
-        width="200"
-        height="200"
-        viewBox="0 0 200 200"
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.circle
-          cx="100"
-          cy="100"
-          r="50"
-          stroke="#e2e2e2"
-          variants={draw}
-          custom={1}
-        />
-      </motion.svg> */}
-
-      <motion.svg
-        width="200"
-        height="200"
-        viewBox="0 0 200 200"
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.line
-          x1="50"
-          y1="50"
-          x2="150"
-          y2="150"
-          stroke="#e2e2e2"
-          variants={draw}
-          custom={1}
-        />
-        <motion.line
-          x1="50"
-          y1="150"
-          x2="150"
-          y2="50"
-          stroke="#e2e2e2"
-          variants={draw}
-          custom={2}
-        />
-      </motion.svg>
+      <Icon type={state === 'x' ? 'line' : state == 'o' ? 'circle' : null} />
     </motion.div>
   )
 }
