@@ -45,7 +45,7 @@ export default function Popup() {
       <div className="text-center p-8 text-5xl font-display select-none">
         {result}
       </div>
-      <h2 className="italic p-8">Whos next?</h2>
+      <h2 className="italic p-8">Who is next?</h2>
       <div className="flex gap-12">
         <Box<State> state={'x'} onClick={() => { handleClick('x'); }} />
         <Box<State> state={'o'} onClick={() => { handleClick('o'); }} />

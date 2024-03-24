@@ -46,8 +46,8 @@ export default function Layer() {
         initial="start"
         animate="end"
         className="flex justify-center items-center text-neutral-800 flex-col">
-        <h1 className="text-center text-5xl font-display select-none">Let's Tic Tac Toe</h1>
-        <h2 className="italic p-8">Whos start?</h2>
+        <h1 className="text-center text-5xl font-display select-none">Tic Tac Toe</h1>
+        <h2 className="italic p-8">Who starts?</h2>
         <div className="flex gap-12">
           <Box<State> state={'x'} onClick={() => { handleClick('x'); }} />
           <Box<State> state={'o'} onClick={() => { handleClick('o'); }} />
