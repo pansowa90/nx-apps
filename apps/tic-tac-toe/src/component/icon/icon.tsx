@@ -31,7 +31,7 @@ const Line = () => {
         y1="50"
         x2="150"
         y2="150"
-        stroke="#e2e2e2"
+        className="stroke-neutral-50"
         variants={draw}
         custom={1}
       />
@@ -40,7 +40,7 @@ const Line = () => {
         y1="150"
         x2="150"
         y2="50"
-        stroke="#e2e2e2"
+        className="stroke-neutral-50"
         variants={draw}
         custom={2}
       />
@@ -52,10 +52,10 @@ const Circle = () => {
   return (
     <>
       <motion.circle
+        className="stroke-neutral-50"
         cx="100"
         cy="100"
         r="50"
-        stroke="#e2e2e2"
         variants={draw}
         custom={1}
       />
@@ -72,8 +72,8 @@ export default function Icon({ type }: Icon) {
       initial="hidden"
       animate="visible"
     >
-      { type === 'circle' ? (<Circle />) : null }
-      { type === 'line' ? (<Line />) : null }
+      {type === 'circle' ? (<Circle />) : null}
+      {type === 'line' ? (<Line />) : null}
     </motion.svg>
   );
 }
