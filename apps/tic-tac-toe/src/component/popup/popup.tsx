@@ -7,10 +7,14 @@ import Box from "@component/box/box";
 
 const popupVariants = {
   start: {
-    y: '100vh',
+    y: '100vh'
   },
   end: {
-    y: 0
+    y: 0,
+    transition: {
+      type: "tween",
+      delay: .75
+    }
   },
 }
 
