@@ -4,10 +4,10 @@ import { DEFAULT_STATE } from "@/app/app.defaults";
 export type State = 'x' | 'o' | undefined;
 
 type ContextType = {
-  state: State;
+  currentPlayer: State;
   result: string | null;
   gameState: Array<State>;
-  setState: (state: State) => void;
+  setCurrentPlayer: (state: State) => void;
   setGameState: (gameState: Array<State>) => void;
   setResult: (result: string | null) => void;
 };
@@ -15,12 +15,12 @@ type ContextType = {
 export const AppContext = createContext<ContextType | undefined>(undefined);
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
-  const [state, setState] = useState<ContextType["state"]>(undefined);
   const [result, setResult] = useState<ContextType["result"]>(null);
   const [gameState, setGameState] = useState<ContextType["gameState"]>(DEFAULT_STATE);
+  const [currentPlayer, setCurrentPlayer] = useState<ContextType["currentPlayer"]>(undefined);
 
   return (
-    <AppContext.Provider value={{ state, setState, result, setResult, gameState, setGameState }}>
+    <AppContext.Provider value={{ result, setResult, gameState, setGameState, currentPlayer, setCurrentPlayer }}>
       {children}
     </AppContext.Provider>
   );

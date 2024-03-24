@@ -27,9 +27,8 @@ const boxVariants = {
 }
 
 export default function Game() {
-  const { state, gameState, setResult, setGameState } = useAppContext();
+  const { gameState, currentPlayer, setResult, setGameState, setCurrentPlayer } = useAppContext();
 
-  const [currentPlayer, setCurrentPlayer] = useState<State>(undefined);
   const [animate, setAnimate] = useState('');
 
   const handleClick = (e: any) => {
@@ -74,11 +73,8 @@ export default function Game() {
   };
 
   useEffect(() => {
-    if (!state) return;
-    setCurrentPlayer(state);
     setAnimate('show');
-
-  }, [state]);
+  }, []);
 
   useEffect(() => {
     if (gameState.filter((s) => s !== undefined).length > 0) {

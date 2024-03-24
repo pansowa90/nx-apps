@@ -19,13 +19,13 @@ const popupVariants = {
 }
 
 export default function Popup() {
-  const { result, setResult, setState, setGameState } = useAppContext();
+  const { result, setResult, setGameState, setCurrentPlayer } = useAppContext();
   const [animation, setAnimation] = useState('start');
 
   const handleClick = (state: State) => {
     setAnimation('start');
+    setCurrentPlayer(state);
     setGameState(DEFAULT_STATE);
-    setState(state);
     setResult(null);
   }
 

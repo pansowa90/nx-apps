@@ -23,13 +23,12 @@ const titleVariants = {
   }
 }
 
-
 export default function Layer() {
-  const { setState } = useAppContext();
+  const { setCurrentPlayer } = useAppContext();
   const [animation, setAnimation] = useState("start");
 
   const handleClick = (state: State) => {
-    setState(state);
+    setCurrentPlayer(state);
     setAnimation("end");
   }
 
