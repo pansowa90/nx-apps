@@ -6,9 +6,7 @@ export default function MagicContainer({ icon, custom }: { icon: IconType; custo
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [mouseOnContainer, setMouseOnContainer] = useState(false);
 
-  const handleMouseMove = (event: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {   
-    console.log('containerRef:', containerRef.current);
-    
+  const handleMouseMove = (event: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {       
     if (containerRef.current !== null) {
       const rect = containerRef.current.getBoundingClientRect();
       const x = event.clientX - rect.left;
