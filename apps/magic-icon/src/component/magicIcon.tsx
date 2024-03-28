@@ -25,11 +25,11 @@ export default function MagicIcon({ custom, icon, cursor, containerRef, mouseOnC
   const [gradientCenter, setGradientCenter] = useState({ cx: "50%", cy: "50%" });
 
   useEffect(() => {
-    console.log('child containerRef:', containerRef)
     if (containerRef && containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect();
       const cxPercentage = (cursor.x / rect.width) * 100;
       const cyPercentage = (cursor.y / rect.height) * 100;
+      console.log('child containerRef:', cursor, rect, mouseOnContainer)
 
       setGradientCenter({
         cx: `${cxPercentage}%`,
