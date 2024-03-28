@@ -50,7 +50,7 @@ export default function MagicContainer({ icon }: { icon: IconType; }) {
       onTouchEnd={() => setMouseOnContainer(false)}
       onMouseEnter={() => setMouseOnContainer(true)}
       onMouseLeave={() => setMouseOnContainer(false)}
-      className="flex place-items-center justify-center w-[24] h-[24] p-8 stroke-[.2] hover:stroke-[.25] cursor-pointer">
+      className="flex place-items-center justify-center w-[24] h-[24] p-4 lg:p-8 stroke-[.2] hover:stroke-[.25] lg:cursor-pointer">
       <MagicIcon
         icon={icon}
         cursor={cursor}
