@@ -1,7 +1,6 @@
 import { useState, type RefObject, useEffect } from "react";
 import { motion } from "framer-motion";
 
-
 export type IconType = 'moon' | 'ship' | 'star';
 
 type MagicIconProps = {
@@ -29,14 +28,12 @@ export default function MagicIcon({ custom, icon, cursor, containerRef, mouseOnC
       const rect = containerRef.current.getBoundingClientRect();
       const cxPercentage = (cursor.x / rect.width) * 100;
       const cyPercentage = (cursor.y / rect.height) * 100;
-      console.log('child containerRef:', cursor, rect, mouseOnContainer)
 
       setGradientCenter({
         cx: `${cxPercentage}%`,
         cy: `${cyPercentage}%`
       })
     }
-
   }, [cursor, containerRef]);
 
   return (
@@ -46,7 +43,7 @@ export default function MagicIcon({ custom, icon, cursor, containerRef, mouseOnC
       className="w-64 h-64 duration-200 transition-all">
       <defs>
         <radialGradient
-          id="emeraldGradient"
+          id={`emeraldGradient-${icon}`}
           gradientUnits="userSpaceOnUse"
           r="35%"
           cx={gradientCenter.cx}
@@ -60,7 +57,7 @@ export default function MagicIcon({ custom, icon, cursor, containerRef, mouseOnC
         strokeLinecap="round"
         strokeLinejoin="round"
         className="fill-gray-900"
-        stroke="url(#emeraldGradient)"
+        stroke={`"url(#emeraldGradient-${icon})"`}
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
         transition={{
