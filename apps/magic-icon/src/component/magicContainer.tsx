@@ -18,7 +18,6 @@ export default function MagicContainer({ icon }: { icon: IconType }) {
 
   return (
     <div
-      key={icon}
       ref={containerRef}
       onMouseMove={(event) => handleMouseMove(event)}
       onMouseEnter={() => setMouseOnContainer(true)}
