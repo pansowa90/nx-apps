@@ -57,7 +57,7 @@ export default function MagicIcon({ custom, icon, cursor, containerRef, mouseOnC
         strokeLinecap="round"
         strokeLinejoin="round"
         className="fill-gray-900"
-        stroke={`"url(#emeraldGradient-${icon})"`}
+        stroke={`url(#emeraldGradient-${icon})`}
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
         transition={{
