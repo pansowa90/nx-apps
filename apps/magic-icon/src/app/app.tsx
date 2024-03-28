@@ -1,13 +1,12 @@
 import { useRef, useState, MouseEvent } from "react";
 import MagicContainer from "../component/magicContainer";
+import { type IconType } from "../component/magicIcon";
 
 export default function App() {
-
+  const icons: Array<IconType> = ['star', 'ship', 'moon'];
   return (
     <div className="flex place-items-center justify-center w-full h-screen">
-      <MagicContainer icon="star" />
-      <MagicContainer icon="ship" />
-      <MagicContainer icon="moon" />
+      {icons.map((icon) => (<MagicContainer key={icon} icon={icon} />))}
     </div>
   );
 }
