@@ -5,8 +5,8 @@ import { type IconType } from "../component/magicIcon";
 export default function App() {
   const icons: Array<IconType> = ['star', 'ship', 'moon'];
   return (
-    <div className="flex place-items-center justify-center w-full h-screen">
-      {icons.map((icon, index) => (<MagicContainer key={index} icon={icon} custom={index}/>))}
+    <div className="flex flex-col lg:flex-row place-items-center justify-center w-full h-screen overflow-hidden">
+      {icons.map((icon, index) => (<MagicContainer key={index} icon={icon} />))}
     </div>
   );
 }
