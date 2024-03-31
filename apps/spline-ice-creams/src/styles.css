@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* You can add global styles to this file, and also import other style files */
+
+body,
+#root {
+  @apply flex place-items-center justify-center w-full h-lvh overflow-hidden;
+  background: #F3E8E0;
+}
