@@ -1,6 +1,5 @@
-import { useRef, useState, MouseEvent } from "react";
 import MagicContainer from "../component/magicContainer";
-import { type IconType } from "../component/magicIcon";
+import { type IconType } from "../assets/icons";
 
 export default function App() {
   const icons: Array<IconType> = ['star', 'ship', 'moon'];

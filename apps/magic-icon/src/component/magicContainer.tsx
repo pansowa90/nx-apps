@@ -1,5 +1,6 @@
 import { useRef, useState, MouseEvent, TouchEvent, SyntheticEvent } from "react";
-import MagicIcon, { IconType } from "../component/magicIcon";
+import { type IconType } from "../assets/icons";
+import MagicIcon from "../component/magicIcon";
 
 function isTouchEvent(e: TouchEvent | MouseEvent): e is TouchEvent {
   return e && 'touches' in e;
@@ -50,7 +51,7 @@ export default function MagicContainer({ icon }: { icon: IconType; }) {
       onTouchEnd={() => setMouseOnContainer(false)}
       onMouseEnter={() => setMouseOnContainer(true)}
       onMouseLeave={() => setMouseOnContainer(false)}
-      className="flex place-items-center justify-center w-[24] h-[24] p-4 lg:p-8 stroke-[.2] hover:stroke-[.25] lg:cursor-pointer">
+      className="flex place-items-center justify-center size-32 lg:size-64 p-4 lg:p-8 stroke-[.2] hover:stroke-[.25] lg:cursor-pointer">
       <MagicIcon
         icon={icon}
         cursor={cursor}
