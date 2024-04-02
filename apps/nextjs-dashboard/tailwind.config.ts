@@ -11,7 +11,11 @@ export default {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        '13': 'repeat(13, minmax(0, 1fr))',
+      }
+    },
   },
   plugins: [],
 } satisfies Config
