@@ -5,6 +5,11 @@ import { lusitana } from '@/app/ui/fonts';
 import Pagination from "@/app/ui/invoices/pagination";
 import Search from "@/app/ui/search";
 import CustomersTable from '@/app/ui/customers/table';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Customers',
+};
 
 export default async function Page({ searchParams }: {
   searchParams?: {
