@@ -1,4 +1,4 @@
-// SOLID Design Principles: single reponsibility example
+// SOLID Design Principles: single responsibility example
 // in cli:
 // start typescritp code using npx ts-code 
 // or generate vanilla js using tsc then start by node
