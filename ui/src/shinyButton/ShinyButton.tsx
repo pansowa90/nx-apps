@@ -30,7 +30,7 @@ export function ShinyButton(props: ShinyButtonProps) {
         }
       }}
     >
-      <span className="tracking-wide w-full h-full block relative linear-mask flex items-center">{props.text}</span>
+      <span className="tracking-wide w-full h-full relative linear-mask flex items-center">{props.text}</span>
       <span className='block absolute inset-0 rounded-md p-[2px] linear-overlay'></span>
     </motion.button>
   );

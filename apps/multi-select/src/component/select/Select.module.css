@@ -1,0 +1,47 @@
+.container {
+  @apply flex relative w-full min-h-9 border border-gray-500 rounded-sm items-center gap-2 p-2 focus:border-cyan-500 outline-none;
+}
+
+.value {
+  @apply grow flex gap-2 flex-wrap;
+}
+
+.icon {
+  @apply text-gray-500 w-6 focus:text-gray-900 hover:text-gray-900 cursor-pointer;
+}
+
+.removeIcon {
+  @apply text-gray-500 w-4 focus:text-gray-900 hover:text-gray-900 cursor-pointer;
+}
+
+.divider {
+  @apply bg-gray-500 self-stretch	w-px;
+}
+
+.options {
+  @apply hidden z-10 absolute top-12 left-0 border border-gray-500 rounded-sm w-full max-h-28 overflow-auto bg-white;
+}
+
+.options.show {
+  @apply block;
+}
+
+.option {
+  @apply px-2 cursor-pointer;
+}
+
+.option.selected {
+  @apply bg-cyan-500;
+} 
+
+.option.highlighted {
+  @apply bg-cyan-300 text-white;
+}
+
+.optionBadge {
+  @apply flex items-center border rounded-sm px-1 cursor-pointer focus:bg-red-100 focus:border-red-500 hover:bg-red-100 hover:border-red-500;
+}
+
+.optionBadge:hover .removeIcon {
+  @apply text-red-500;
+}
