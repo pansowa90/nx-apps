@@ -5,5 +5,12 @@
   "projectType": "application",
   "tags": [],
   "// targets": "to see all targets run: nx show project multi-select --web",
-  "targets": {}
+  "targets": {
+    "partytown": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "partytown copylib public/~partytown"
+      }
+    }
+  }
 }
